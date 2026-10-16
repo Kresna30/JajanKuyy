@@ -1,0 +1,321 @@
+/* Selector dasar: tag, class, dan id. Warna ditulis langsung. */
+div,
+aside,
+input,
+button {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: white;
+  color: #7A0402;
+  font: 14px/1.5 Arial, sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1180px;
+  margin: auto;
+}
+
+a {
+  color: #96080D;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+  padding: 8px;
+  border: 1px solid #E99731;
+  border-radius: 6px;
+}
+
+button {
+  cursor: pointer;
+  background: #FDB627;
+  color: #7A0402;
+}
+
+.header-inner,
+nav,
+.basket-layout,
+.cart-item,
+.controls,
+dl div,
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.quantity-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid #e5e0db;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.quantity-control button {
+  width: 30px;
+  padding: 4px;
+  border: 0;
+  border-radius: 0;
+}
+
+.quantity-control input {
+  width: 42px;
+  padding: 5px 2px;
+  border: 0;
+  border-left: 1px solid #e5e0db;
+  border-right: 1px solid #e5e0db;
+  border-radius: 0;
+  text-align: center;
+}
+
+.delete-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.brand-logo {
+  width: 76px;
+  display: block;
+}
+
+#keranjang {
+  padding: 40px 0 56px;
+}
+
+.section-heading,
+.cart-item,
+.total {
+  margin-bottom: 24px;
+}
+
+.heading-badge,
+.delivery {
+  background: #FEEFC8;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.cart-panel {
+  flex: 2 1 420px;
+  min-width: 0;
+}
+
+.cart-panel,
+.summary,
+.empty-cart {
+  padding: 20px;
+  border: 1px solid #FAC03E;
+  border-radius: 12px;
+}
+
+.summary {
+  flex: none;
+  min-width: 0;
+  background: #fffaf0;
+  align-self: flex-start;
+}
+
+.summary-column {
+  flex: 1 1 260px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.empty-cart,
+.site-footer {
+  padding: 32px 16px;
+  text-align: center;
+  background: #fffaf0;
+}
+
+.empty-art,
+.food-art {
+  font-size: 48px;
+}
+
+.item-info {
+  flex: 1 1 140px;
+}
+
+.quantity input {
+  width: 44px;
+}
+
+.checkout {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  padding: 13px 18px;
+  border: 1px solid #E99731;
+  border-radius: 8px;
+  background: #FDB627;
+  color: #7A0402;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+  box-shadow: 0 2px 4px #7A04021a;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.checkout:hover {
+  background: #F4A900;
+  box-shadow: 0 4px 8px #7A040226;
+  transform: translateY(-1px);
+}
+
+.checkout:focus-visible {
+  outline: 3px solid #7A0402;
+  outline-offset: 3px;
+}
+
+.notice {
+  position: fixed;
+  bottom: 16px;
+  left: 5%;
+  right: 5%;
+  padding: 16px;
+  background: #7A0402;
+  color: white;
+}
+
+/* Detail tampilan agar tetap ringkas dan mudah dipelajari */
+.site-header {
+  border-bottom: 1px solid #eee5d9;
+  padding: 12px 0;
+}
+
+.cart-item {
+  border-bottom: 1px solid #eee5d9;
+  padding-bottom: 20px;
+}
+
+/* Finishing touches for the live cart layout */
+.basket-layout {
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.cart-panel,
+.summary {
+  background: #fff;
+  box-shadow: 0 8px 24px #7a04020b;
+}
+
+.summary-column .summary {
+  width: 100%;
+}
+
+.cart-panel>.cart-item {
+  justify-content: flex-start;
+  gap: 18px;
+  padding: 18px 0;
+  margin: 0;
+}
+
+.cart-item>img {
+  width: 88px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #fff4d9;
+}
+
+.item-actions {
+  display: grid;
+  gap: 10px;
+  text-align: right;
+}
+
+.summary h2,
+.cart-panel h2 {
+  margin-top: 0;
+}
+
+.summary dl {
+  margin: 18px 0;
+}
+
+.summary .total {
+  margin: 0;
+  padding-top: 14px;
+  border-top: 1px solid #f0e6d7;
+}
+
+.cart-panel [data-kosongkan] {
+  margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+  #keranjang {
+    padding: 24px 0 36px;
+  }
+
+  .basket-layout {
+    gap: 16px;
+  }
+
+  .cart-panel,
+  .summary {
+    padding: 16px;
+  }
+
+  .cart-panel>.cart-item {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .cart-item>img {
+    width: 68px;
+    height: 68px;
+  }
+
+  .item-actions {
+    width: 100%;
+    text-align: left;
+  }
+
+  .checkout {
+    min-height: 46px;
+  }
+}
+
+.food-art {
+  background: #FEEFC8;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.item-info p,
+.summary-note,
+.promo-hint {
+  color: #86766d;
+  font-size: 12px;
+}
+
+.panel-heading,
+.total {
+  font-weight: bold;
+}
+
+.cart-footer,
+.item-actions {
+  text-align: right;
+}
+
+.header-divider {
+  margin: 0 12px
+}
